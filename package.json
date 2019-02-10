@@ -1,6 +1,6 @@
 {
   "name": "replace-terms-in-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This allows you to replace many terms in all the files in a glob or list of files, asynchronously.",
   "scripts": {},
   "main": "index.js",

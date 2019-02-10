@@ -15,6 +15,9 @@ npm install replace-terms-in-files
 ## How to use it
 
 ```js
+
+const replaceTermsInFiles = require('replace-terms-in-files');
+
 replaceTermsInFiles({
     targets: [
         './a-deep-directory/**/*',
