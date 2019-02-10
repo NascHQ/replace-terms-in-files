@@ -37,3 +37,11 @@ replaceTermsInFiles({
     }
 });
 ```
+
+> Note that we use Regular Expressions for the replacements, therfore, `%\__DATE__%` from the sample above, actually becomes `/%\__DATE__%/g`. If you have special characters in your key for replacement, you might have to scape it using a backslash `\`.
+
+## This is open source
+
+Yes, please, feel free to help us out :)
+
+This module is MIT licensed.
