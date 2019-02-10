@@ -1,0 +1,2 @@
+A text file from %__PROJECT_NAME__%@%__BUILD_VERSION__%.
+The build was generated at %__DATE__%
