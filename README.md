@@ -18,13 +18,15 @@ npm install replace-terms-in-files
 
 const replaceTermsInFiles = require('replace-terms-in-files');
 
-replaceTermsInFiles({
+const status = await replaceTermsInFiles({
     targets: [
         './a-deep-directory/**/*',
         './some-shallow-directory/*'
     ],
     // extensions are optional
     extensions: ['.js', '.txt'],
+    // optionally, you can ignore matching files
+    ignore: ['static', /\.old\.js$/],
     // these are optional too
     termOpen: '%__',
     termClose: '__%',
@@ -39,9 +41,15 @@ replaceTermsInFiles({
         'BUILD_VERSION': 123
     }
 });
+
+console.log(status.toString());
+// outputs something like:
+// X files changed, in a total of Y replacements
 ```
 
 > Note that we use Regular Expressions for the replacements, therfore, `%\__DATE__%` from the sample above, actually becomes `/%\__DATE__%/g`. If you have special characters in your key for replacement, you might have to scape it using a backslash `\`.
+
+This module resolves to an `status object` containing all the files which suffered any change, and also a total number of changes applied to all of them.
 
 ## This is open source
 

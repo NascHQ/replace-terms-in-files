@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 async function init () {
     await fs.copy('./demo/test-from/', './demo/test-to');
 
-    await replaceTermsInFiles({
+    const status = await replaceTermsInFiles({
         targets: [
             './demo/test-to/**/*'
         ],
@@ -15,9 +15,11 @@ async function init () {
             'PROJECT_NAME': 'Project\'s awesome name',
             'DATE': new Date(),
             'BUILD_VERSION': 123
-        }
+        },
+        ignore: [/static/]
     });
-    console.log('done');
+    console.log('Done :)');
+    console.log(status.toString());
 }
 
 init();
