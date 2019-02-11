@@ -1,20 +1,26 @@
 {
   "name": "replace-terms-in-files",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This allows you to replace many terms in all the files in a glob or list of files, asynchronously.",
   "scripts": {},
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NascHQ/share-api-polyfill.git"
+    "url": "git+https://github.com/NascHQ/replace-terms-in-files"
   },
-  "keywords": [],
+  "keywords": [
+    "glob",
+    "replace",
+    "recursive",
+    "regexp",
+    "async"
+  ],
   "author": "NascHQ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NascHQ/share-api-polyfill/issues"
+    "url": "https://github.com/NascHQ/replace-terms-in-files/issues"
   },
-  "homepage": "https://github.com/NascHQ/share-api-polyfill#readme",
+  "homepage": "https://github.com/NascHQ/replace-terms-in-files#readme",
   "private": false,
   "dependencies": {
     "fs-extra": "^6.0.1",
